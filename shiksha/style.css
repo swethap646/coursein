@@ -1,0 +1,482 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,500;0,600;1,400&display=swap');
+
+*{
+    font-family: 'Poppins', sans-serif;
+    margin:0;padding:0;
+    outline:none;border:none;
+    box-sizing:border-box;
+    text-decoration:none;
+    text-transform:capitalize;
+    transition:all .2s linear;
+
+}
+
+:root{
+    --blue:#0492c2;
+    --mint:#99edc3;
+}
+html{
+    font-size:62.5%;
+    overflow-x:hidden;
+    scroll-behavior: smooth;
+}
+
+html::-webkit-scrollbar{
+   width:1rem;
+   height:2rem;
+}
+html::-webkit-scrollbar-track{
+    background:transparent;
+}
+html::-webkit-scrollbar-thumb{
+    background:#444;
+}
+body{
+    height:1rem;
+}
+
+header{
+    background:var(--blue);
+    position:fixed;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:1.5rem 6%;
+    top:0;left:0;right:0;
+    z-index:1000;
+
+}
+
+header .logo{
+    font-size:2.5rem;
+    color:#fff;
+    cursor:pointer;
+    padding:1.5rem;
+}
+
+header .nav-bar ul{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+header .nav-bar ul li{
+  list-style-type:none;
+}
+header .nav-bar ul li a{
+    font-size:2rem;
+    color:#fff;
+    cursor:pointer;
+    margin-left:1.5rem;
+    padding:1rem;
+}
+header .nav-bar ul li a:hover{
+    color:var(--mint);
+}
+
+.login-form{
+    height:100%;
+    width:100%;
+    position: fixed;
+    top:-120%; left: 0;
+    z-index: 1000;
+    background:rgba(0,0,0,.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-form.popup{
+    top:0;
+}
+
+.login-form form{
+    width:35rem;
+    background:#fff;
+    margin:0 2rem;
+    padding:1rem 3rem;
+    border-radius: .5rem;
+    box-shadow: 0 .1rem .3rem #333;
+    position: relative;
+}
+
+.login-form form h3{
+    font-size: 3rem;
+    color:#f39c12;
+    padding:1rem 0;
+}
+
+.login-form form .box{
+    width:100%;
+    padding:1rem 0;
+    margin:1rem 0;
+    border-bottom: .2rem solid #666;
+    font-size: 1.6rem;
+    color:#333;
+    text-transform: none;
+}
+
+.login-form form .box::placeholder{
+    text-transform: capitalize;
+}
+
+.login-form form .box:focus{
+    border-color: #f39c12;
+}
+
+.login-form form .box:nth-child(3){
+    margin-bottom: 5rem;
+}
+
+.login-form form p{
+    font-size: 1.4rem;
+    color:#666;
+    padding:.5rem 0;
+}
+
+.login-form form p a{
+    color:#f39c12;
+}
+
+.login-form form .btn{
+    width: 100%;
+    margin:2rem 0;
+}
+
+.login-form form .btn:hover{
+    background:#444;
+}
+
+.login-form form .fa-times{
+    position: absolute;
+    top:1.5rem; right:2rem;
+    font-size: 2.5rem;
+    cursor: pointer;
+    color:#999;
+}
+
+.login-form form .fa-times:hover{
+    color:#444;
+}
+
+
+header #menu{
+    font-size: 2rem;
+    color:#fff;
+    cursor: pointer;
+    display:none;
+    
+}
+
+header .icons a{
+   font-size:2rem;
+   color:#fff;
+   padding:1rem;
+   cursor:pointer;
+}
+
+header .icons a:hover{
+    color:var(--mint);
+}
+
+
+section{
+    min-height:100vh;
+    padding:1rem 7%;
+    padding-top:6rem;
+}
+.home{
+   min-height:100vh;
+   display:flex;
+   align-items:center;
+   justify-content:center;
+   flex-flow:column;
+   background:url("School-6.webp");
+   background-size:cover;
+   background-position:center;
+   background-attachment:fixed;
+   position:relative;
+   text-align:center;
+}
+
+.home h1{
+    color:#000;
+    text-align:center;
+    text-transform:capitalize;
+    font-size:5rem;
+}
+
+.home p{
+    font-size:1.9rem;
+    color:#000;
+    padding:1rem 0;
+    width:70rem;
+}
+.home a{
+    padding:.7rem 3rem;
+    color:#fff;
+    font-size:2rem;
+    background:var(--mint);
+    border-radius:1rem;
+    margin-top:1rem;
+    cursor:pointer;
+    box-shadow:0 .1rem .3rem rgba(0,0,0,.3);
+}
+  h1{
+     color:#444;
+    text-align:center;
+    text-transform:capitalize;
+    padding-top:5rem;
+    font-size:3rem;
+ }
+.aboutus{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-wrap:wrap;
+    
+}
+
+
+.aboutus .image{
+    flex:1 1 40rem;
+    
+}
+.aboutus .image img{
+    height:40rem;
+    width:60rem;
+    object-fit:cover;
+    border:1rem solid var(--mint);
+    border-radius:3rem;
+    box-shadow: 0 .1rem .3rem rgba(255,255,255);
+}
+
+.aboutus .content{
+    flex:1 1 40rem;
+    
+}
+
+.aboutus .content h3{
+    font-size:3.5rem;
+    color:#444;
+}
+.aboutus .content p{
+   font-size:1.5rem;
+   color:#666;
+   padding:1rem 0;
+}
+
+.courses .box-container{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-wrap:wrap;
+}
+.courses .box-container .box{
+    width:39rem;
+    border:.1rem solid rgba(0,0,0,.3);
+    position:relative;
+    margin:1.5rem;
+}
+
+.courses .box-container .box img{
+    height:20rem;
+    width:100%;
+    object-fit:cover;
+}
+.courses .box-container .box .content .stars .far{
+    color:var(--blue);
+    font-size:1.9rem;
+    padding:1rem .1rem; 
+}
+.courses .box-container .box .title{
+    color:#444;
+    font-size:2.1rem;
+    padding:0 1rem;
+} 
+.courses .box-container .box .content p{
+    padding:1rem;
+    font-size:1.5rem;
+    color:#666;
+    padding-top:1rem;
+}
+
+.courses .box-container .box .content .info{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding-top:.5rem;
+    border-top:.1rem solid rgba(0,0,0,.3);
+}
+
+.courses .box-container .box .content .info h3{
+    font-size:1.5rem;
+    padding:1rem;
+    color:#666;
+}
+
+.courses .box-container .box .content .info h3 i{
+    color:var(--mint);
+}
+
+.heading{
+    color:#444;
+    text-align:center;
+    text-transform:capitalize;
+    font-size:3rem;
+}
+
+.courses .box-container .box .price{
+    position:absolute;
+    top:16rem;right:1rem;
+    height:8rem;width:8rem;
+    line-height:8rem;
+    background:var(--mint);
+    color:var(--blue);
+    text-align:center;
+    font-size:1.8rem;
+    border-radius:50%;
+    
+}
+
+.teachers{
+    min-height:100vh;
+    background-image:url("teachers.jpg");
+    background-size:cover;
+    background-position:center;
+    text-align:center;
+}
+
+.teachers p{
+    text-align:center;
+    padding-top:12rem;
+    line-height:5rem;
+    width:100%;
+    font-size:2rem;
+    color:#fff;
+
+}
+ .btn{
+    font-size:2rem;
+    border-radius:1rem;
+    background:var(--mint);
+    color:var(--blue);
+    padding:.7rem 3rem;
+
+} 
+
+.contact{
+    
+    background:var(--mint);
+}
+
+.contact  h1{
+    color:#fff;
+    text-align:center;
+    text-transform:capitalize;
+    font-size:3rem;
+}
+.contact .row{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-wrap:wrap;
+}
+
+.contact .row form{
+    flex:1 1 50rem;
+    height:50rem;
+    background:#fff;
+    border-radius:2rem;
+    padding:2rem;
+    margin-top:3rem;
+    align-items:flex-start;
+    border:.5rem solid var(--blue);
+}
+
+.contact .row form .box{
+    height:5rem;
+    justify-content:space-between;
+    width:49%;
+    border:.2rem solid var(--mint);
+    border-radius:2rem;
+    color:#666;
+    background:none;
+    text-transform:none;
+    font-size:1.7rem;
+    padding:0 1rem;
+    margin:1rem 0;
+}
+.contact .row form .address{
+    height:15rem;
+    border:.2rem solid var(--mint);
+    width:100%;
+    resize:none;
+    padding:1rem;
+    margin:2rem 0;
+    border-radius:2rem;
+}
+
+
+@media (max-width:768px){
+    html{
+        font-size:55%;
+    }
+
+    header #menu{
+        display:block;
+    }
+
+    header .nav-bar{
+        position:fixed;
+        top:-120%;left:0;
+        width:100%;
+        background:#444;
+    }
+
+    header .nav-bar ul{
+        flex-flow:column;
+        padding:2rem 0;
+    }
+    header .nav-bar ul li{
+        margin:1.5rem 0;
+        width:100%;
+        text-align:center;
+    }
+    header .nav-bar ul li a{
+        font-size:2.5rem;
+        display:block;
+    }
+
+    header .nav-bar ul li a.active,
+    header .nav-bar ul li a:hover{
+        color:var(--mint);
+    }
+
+    .fa-times{
+        transform:rotate(180deg);
+    }
+
+    header .nav-bar .nav-toggle{
+        top:6.4rem;
+    }
+
+    header h1{
+        font-size:4rem;
+    }
+
+    .home p{
+        width:auto;
+    }
+    .teachers p{
+        width:auto;
+    }
+}
+
+@media (max-width:500px){
+
+    html{
+        font-size: 50%;
+    }
+}
